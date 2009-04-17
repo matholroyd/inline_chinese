@@ -1,0 +1,12 @@
+= Inline Chinese
+
+Type chinese characters on the browser side by using javascript. Two lookups included:
+* pinyin => (simplified) chinese
+* gwoyeu romantzyh => (simplified) chinese
+
+== Purpose
+
+There are several benefits to using a browser-side, western keyboard => chinese characters setup.
+
+* Only need to "turn it on" for certain input fields, which can save a lot of time if you have a site that has e.g. chinese-only and english-only fields. By setting which fields will turn english characters into chinese, the user does not have to keep switching chinese input on and off when going from one field to another.
+* Users do not need to have a chinese input program installed on their computer. Useful for Chinese traveling abroad or using another person's computer. Note the the computer still needs to have chinese fonts installed.
