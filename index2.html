@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>jQuery Autocomplete Plugin</title>
+ <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+ <script type="text/javascript" src="javascripts/jquery.js"></script>
+ <script type='text/javascript' src='javascripts/jquery.autocomplete.js'></script>
+ <script type='text/javascript' src='/Users/matholroyd/Desktop/chinese_characters.js'></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.autocomplete.css" />
+	
+<script type="text/javascript">
+$().ready(function() {
+
+	function findValueCallback(event, data, formatted) {
+		$("<li>").html( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
+	}
+	
+	$("#tags").autocomplete(chinese_characters, {
+    // width: 320,
+    max: 15,
+    // highlight: false,
+		multiple: true,
+		multipleSeparator: " ",
+    // scroll: true,
+    // scrollHeight: 300,
+		formatItem: function(row) {
+		  return row[0] + " " + row[1];
+		},
+    formatResult: function(row) {
+     return row[1];
+    }
+	});
+	
+	
+	$(":text, textarea").result(findValueCallback).next().click(function() {
+		$(this).prev().search();
+	});
+
+	$("#scrollChange").click(changeScrollHeight);
+	
+});
+
+function changeOptions(){
+	var max = parseInt(window.prompt('Please type number of items to display:', jQuery.Autocompleter.defaults.max));
+	if (max > 0) {
+		$("#suggest1").setOptions({
+			max: max
+		});
+	}
+}
+
+function changeScrollHeight() {
+    var h = parseInt(window.prompt('Please type new scroll height (number in pixels):', jQuery.Autocompleter.defaults.scrollHeight));
+    if(h > 0) {
+        $("#suggest1").setOptions({
+			scrollHeight: h
+		});
+    }
+}
+
+
+</script>
+	
+</head>
+
+<body>
+
+<div id="content">
+	
+	<form autocomplete="off">
+
+    <p>
+			<label>Tags (local):</label>
+			<textarea type="text" id='tags' style='width:90%;height:200px;' />
+			<input type="button" value="Get Value" />
+		</p>
+		
+		<input type="submit" value="Submit" />
+	</form>
+	 
+	<p>
+		<a href="#TB_inline?height=155&width=400&inlineId=modalWindow" class="thickbox">Click here for an autocomplete inside a thickbox window.</a> (this should work even if it is beyond the fold)
+	</p>		
+	
+	<div id="modalWindow" style="display: none;">
+                <p>
+                        <label>E-Mail (local):</label>
+                        <input type="text" id="thickboxEmail" />
+                        <input type="button" value="Get Value" />
+                </p>
+		</div>
+		
+	<button id="clear">Remove all autocompletes</button>
+	
+	<a href="search.phps">PHP script used to for remote autocomplete</a>
+	
+	<h3>Result:</h3> <ol id="result"></ol>
+
+</div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2623402-1";
+urchinTracker();
+</script>
+</body>
+</html>
