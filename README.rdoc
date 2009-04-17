@@ -1,9 +1,8 @@
 = Inline Chinese
 
-Inline latin-alphabet-to-chinese-characters using javascript. Two dictionaries included:
+Inline latin-alphabet-to-chinese-characters input using javascript. Two dictionaries included:
 * pinyin => (simplified) chinese
 * gwoyeu romantzyh => (simplified) chinese
-
 
 == Benefits
 
@@ -15,7 +14,7 @@ There are several benefits to using a browser-side latin-alphabet-to-chinese-cha
 
 == Gwoyeu Romantzyh
 
-Pinyin is the official standard romanization of Chinese characters i.e. it is used by the Chinese government.  It however has several fundamental problems.  These problems all stem from that fact that tones in pinyin are represented by tonal marks. E.g.
+Pinyin is the official standard romanization of Chinese characters i.e. it is used by the Chinese government.  It however has several fundamental problems.  These problems all stem from that fact that tones in Pinyin are represented by tonal marks. E.g.
 * Tonal marks cannot be typed on a computer easily. It is very time consuming to type or add tonal marks to a piece of text.
 * Tonal marks are, in practice, impossible to remember, and thus remembering the pinyin does not translate to remembering the tones.  
 
@@ -23,11 +22,15 @@ Gwoyeu Romantzyh (often abbreviated to 'GR') is an alternative phonetic system f
 
 For more information, see http://en.wikipedia.org/wiki/Gwoyeu_Romatzyh.
 
+= Usage
+
+Download the source and view example.html to see a working example.  Essentially the code works by using the jQuery AutoCompleter plugin, and then simply supplying two javascript dictionaries- one for Pinyin, one for Gwoyeu Romantzyh. 
+
 = To be fixed
 
 There are a handful of problems that someone skilled at jQuery/javascript could probably fix in about 10mins (I barely know javascript, let alone jQuery).
 
-The currently problems are:
+The current problems are:
 
 * Have to press Enter to select the character. Space does not work.
 * A space is inserted between every character. Can stop this behavior by setting
