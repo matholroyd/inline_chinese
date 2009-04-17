@@ -12,19 +12,6 @@
 	
 <script type="text/javascript">
 $().ready(function() {
-
-  
-	$("#gwoyeu_romantzyh").autocomplete(gwoyeu_romantzyh, {
-    max: 15,
-    multiple: true,
-    multipleSeparator: " ",
-    formatItem: function(row) {
-      return row[0] + " " + row[1];
-    },
-    formatResult: function(row) {
-      return row[1];
-    }
-  });
   	
 	$("#pinyin").autocomplete(pinyin, {
     max: 15,
@@ -38,8 +25,18 @@ $().ready(function() {
     }
   });
 
+	$("#gwoyeu_romantzyh").autocomplete(gwoyeu_romantzyh, {
+    max: 15,
+    multiple: true,
+    multipleSeparator: " ",
+    formatItem: function(row) {
+      return row[0] + " " + row[1];
+    },
+    formatResult: function(row) {
+      return row[1];
+    }
+  });
   
-	
 });
 
 </script>
