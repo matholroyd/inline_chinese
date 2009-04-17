@@ -4,12 +4,24 @@ Type chinese characters on the browser side by using javascript. Two lookups inc
 * pinyin => (simplified) chinese
 * gwoyeu romantzyh => (simplified) chinese
 
-== Purpose
+
+== Benefits
 
 There are several benefits to using a browser-side, western keyboard => chinese characters setup.
 
 * Only need to "turn it on" for certain input fields, which can save a lot of time if you have a site that has e.g. chinese-only and english-only fields. By setting which fields will turn english characters into chinese, the user does not have to keep switching chinese input on and off when going from one field to another.
 * Users do not need to have a chinese input program installed on their computer. Useful for Chinese traveling abroad or using another person's computer. Note the computer still needs to have chinese fonts installed.
+* By using this setup to input Chinese, it has been very easy to add Gwoyeu Romantzyh support.  This goes for any alternative Chinese phonetic input system, meaning someone could very easily try out any alternative phonetic representation.  Furthermore, this code can be just as easily extended to enter other character-based languages, such as Japanese.     
+
+== Gwoyeu Romantzyh
+
+Pinyin is the official standard romanization of Chinese characters i.e. it is used by the Chinese government.  It however has several fundamental problems.  These problems all stem from that fact that tones in pinyin are represented by tonal marks. E.g.
+* Tonal marks cannot be typed on a computer easily. It is very time consuming to type or add tonal marks to a piece of text.
+* Tonal marks are, in practice, impossible to remember, and thus remembering the pinyin does not translate to remembering the tones.  
+
+Gwoyeu Romantzyh (often abbreviated to 'GR') is an alternative phonetic system for Chinese characters that uses spelling to represent tones. The payoff for students who use GR is a more accurate recalling of tones, which is leads to a quicker mastery of the language.  
+
+For more information, see http://en.wikipedia.org/wiki/Gwoyeu_Romatzyh.
 
 = To be fixed
 
@@ -18,7 +30,8 @@ There are a handful of problems that someone skilled at jQuery/javascript could 
 That said, the currently problems are:
 
 * Have to press Enter to select the character. Space does not work.
-* A space is inserted between every character. Can stop this behavior by setting 
+* A space is inserted between every character. Can stop this behavior by setting:
+
 
   multipleSeparator: " "
 
