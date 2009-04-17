@@ -1,13 +1,13 @@
 = Inline Chinese
 
-Type chinese characters on the browser side by using javascript. Two lookups included:
+Inline latin-alphabet-to-chinese-characters using javascript. Two dictionaries included:
 * pinyin => (simplified) chinese
 * gwoyeu romantzyh => (simplified) chinese
 
 
 == Benefits
 
-There are several benefits to using a browser-side, western keyboard => chinese characters setup.
+There are several benefits to using a browser-side latin-alphabet-to-chinese-characters input setup.
 
 * Only need to "turn it on" for certain input fields, which can save a lot of time if you have a site that has e.g. chinese-only and english-only fields. By setting which fields will turn english characters into chinese, the user does not have to keep switching chinese input on and off when going from one field to another.
 * Users do not need to have a chinese input program installed on their computer. Useful for Chinese traveling abroad or using another person's computer. Note the computer still needs to have chinese fonts installed.
@@ -19,7 +19,7 @@ Pinyin is the official standard romanization of Chinese characters i.e. it is us
 * Tonal marks cannot be typed on a computer easily. It is very time consuming to type or add tonal marks to a piece of text.
 * Tonal marks are, in practice, impossible to remember, and thus remembering the pinyin does not translate to remembering the tones.  
 
-Gwoyeu Romantzyh (often abbreviated to 'GR') is an alternative phonetic system for Chinese characters that uses spelling to represent tones. The payoff for students who use GR is a more accurate recalling of tones, which is leads to a quicker mastery of the language.  
+Gwoyeu Romantzyh (often abbreviated to 'GR') is an alternative phonetic system for Chinese characters that uses spelling to represent tones. The payoff for students who use GR is a more accurate recalling of tones, which leads to a quicker mastery of the language.  
 
 For more information, see http://en.wikipedia.org/wiki/Gwoyeu_Romatzyh.
 
