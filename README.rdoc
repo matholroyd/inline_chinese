@@ -9,4 +9,25 @@ Type chinese characters on the browser side by using javascript. Two lookups inc
 There are several benefits to using a browser-side, western keyboard => chinese characters setup.
 
 * Only need to "turn it on" for certain input fields, which can save a lot of time if you have a site that has e.g. chinese-only and english-only fields. By setting which fields will turn english characters into chinese, the user does not have to keep switching chinese input on and off when going from one field to another.
-* Users do not need to have a chinese input program installed on their computer. Useful for Chinese traveling abroad or using another person's computer. Note the the computer still needs to have chinese fonts installed.
+* Users do not need to have a chinese input program installed on their computer. Useful for Chinese traveling abroad or using another person's computer. Note the computer still needs to have chinese fonts installed.
+
+= To be fixed
+
+There are a handful of problems that someone skilled at jQuery/javascript could probably fix in about 10mins (I barely know javascript, let alone jQuery).
+
+That said, the currently problems are:
+
+* Have to press Enter to select the character. Space does not work.
+* A space is inserted between every character. Can stop this behavior by setting 
+
+  multipleSeparator: " "
+
+to
+
+  multipleSeparator: ""
+
+The problem is then that the character selection does not work properly.  
+  
+* Can only add chinese characters to the end.  That is, the replacing of latin characters with chinese only works for the last bunch of characters (assuming they are latin characters). You cannot go back and add characters in the middle of a piece of text.
+
+
