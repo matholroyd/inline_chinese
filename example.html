@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>Example Chinese</title>
+ <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+ <script type="text/javascript" src="javascript/jquery.js"></script>
+ <script type='text/javascript' src='javascript/jquery.autocomplete.js'></script>
+ <script type='text/javascript' src='javascript_data/chinese_characters.js'></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.autocomplete.css" />
+	
+<script type="text/javascript">
+$().ready(function() {
+
+  
+	$("#gwoyeu_romantzyh").autocomplete(gwoyeu_romantzyh, {
+    max: 15,
+    multiple: true,
+    multipleSeparator: " ",
+    formatItem: function(row) {
+      return row[0] + " " + row[1];
+    },
+    formatResult: function(row) {
+      return row[1];
+    }
+  });
+  	
+	$("#pinyin").autocomplete(pinyin, {
+    max: 15,
+    multiple: true,
+    multipleSeparator: " ",
+    formatItem: function(row) {
+      return row[0] + " " + row[1];
+    },
+    formatResult: function(row) {
+      return row[1];
+    }
+  });
+
+  
+	
+});
+
+</script>
+	
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Pinyin input:</th>
+      <th>Gwoyeu Romantzyh input:</th>
+		</tr>
+    <tr>
+      <td>
+    		<textarea id='pinyin' style='width:400px;height:200px;'></textarea>
+		  </td>
+      <td>
+		    <textarea id='gwoyeu_romantzyh' style='width:400px;height:200px;'></textarea>
+		  </td>
+		</tr>
+	</table>
+		 
+
+</body>
+</html>

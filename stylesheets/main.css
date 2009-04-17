@@ -43,7 +43,6 @@ ul {
 }
 
 label {
-	float: left;
 	width: 12em;
 }
 input[type=text] { width: 15em; }
